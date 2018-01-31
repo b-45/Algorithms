@@ -11,7 +11,7 @@ Javascript Algorithms
 #### Problem Statement
 Return a new string with the reversed order of characters.
 
-### Pseudocode
+#### Pseudocode
 - declare a function and give it a string as parameter 
 - use the `split` method to covert the string into an array
 - use `reverse` method to reverse the items in the array
