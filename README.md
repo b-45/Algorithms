@@ -8,7 +8,7 @@ Javascript Algorithms
 ### 1. Reverse string
 ***
 
-### Problem Statement
+#### Problem Statement
 Return a new string with the reversed order of characters.
 
 ### Pseudocode
@@ -18,7 +18,7 @@ Return a new string with the reversed order of characters.
 - then use the `join` method to convert the array back into a string 
 - return the string
 
-### Code
+#### Code
 ```
 function reverse(str) {
     .split('')
@@ -31,17 +31,17 @@ function reverse(str) {
 ### 2. Palindrome
 ***
 
-### Problem Statement
+#### Problem Statement
 Palindromes are strings that form the same word when reversed. i.e kayak, civic.  Return true if the string is a palindrome or false if it is not.
 
-### Pseudocode
+#### Pseudocode
 - declare a function and give it a string as parameter 
 - use the `split` method to covert the string into an array
 - use `reverse` method to reverse the items in the array
 - use the `join` method to convert the array back into a string 
 - then check to see if the reversed string and original string is truthy or falsy.
 
-### Code
+#### Code
 ```
 function palindrome(str) {
   let reversed = str.split('').reverse().join('');
@@ -52,10 +52,10 @@ function palindrome(str) {
 ### 3. Fizzbuzz
 ***
 
-### Problem Statement
+#### Problem Statement
 Write a script that prints the number 1 to n, however for multiples 3 print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
 
-### Pseudocode
+#### Pseudocode
 - declare a function and give it a number as parameter 
 - write a for loop to iterate from 1 to n
 - write multiple if else statements
@@ -64,7 +64,7 @@ Write a script that prints the number 1 to n, however for multiples 3 print "fiz
 - condition 3 checks if n modulo 5 equals 0 then console log 'buzz'
 - else console log number
 
-### Code
+#### Code
 ```
 function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
