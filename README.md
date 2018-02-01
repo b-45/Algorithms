@@ -116,7 +116,8 @@ function reverseInt(n) {
   .reverse()
   .join('')
   
-  const checkNegativeSign = n < 0 ? parseInt(reverse) * -1 : parseInt(reverse)  // use ternary operator to check if number is negative
+// use ternary operator to check if number is negative
+  const checkNegativeSign = n < 0 ? parseInt(reverse) * -1 : parseInt(reverse)  
   return checkNegativeSign
   }
 ```
