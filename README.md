@@ -13,7 +13,7 @@ Return a new string with the reversed order of characters.
 
 #### Pseudocode
 - declare a function and give it a string as parameter 
-- use the `split` method to covert the string into an array
+- use the `split` method to convert the string into an array
 - use `reverse` method to reverse the items in the array
 - then use the `join` method to convert the array back into a string 
 - return the string
@@ -52,13 +52,8 @@ function palindrome(str) {
 ### 3. Fizzbuzz
 ***
 
-<<<<<<< HEAD
 ### Problem Statement
 Write a script that prints the number 1 to n, however for multiples of 3 - print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
-=======
-#### Problem Statement
-Write a script that prints the number 1 to n, however for multiples 3 print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
->>>>>>> a9e6ac50354aef02dc2e24e8f31bac19894eb02e
 
 #### Pseudocode
 - declare a function and give it a number as parameter 
