@@ -53,16 +53,16 @@ function palindrome(str) {
 ***
 
 ### Problem Statement
-Write a script that prints the number 1 to n, however for multiples 3 print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
+Write a script that prints the number 1 to n, however for multiples of 3 - print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
 
 ### Pseudocode
 - declare a function and give it a number as parameter 
 - write a for loop to iterate from 1 to n
-- write multiple if else statements
+- write multiple `else if` statements
 - condition 1 checks if n modulo 3 and n modulo 5 equals 0 then console log 'fizzbuzz'
 - condition 2 checks if n modulo 3 equals 0 then console log 'fizz'
 - condition 3 checks if n modulo 5 equals 0 then console log 'buzz'
-- else console log number
+- else console log any number outside of the aforementioned conditions
 
 ### Code
 ```
@@ -79,6 +79,46 @@ function fizzBuzz(n) {
     }
   }
 }
+```
+
+### 4. Reverse Integer
+***
+
+### Problem Statement
+Given an integer, return an integer that is reversed while satisfying the following conditions i.e 15 returns 51, -25 returns -52,  100 returns 1.
+
+### Pseudocode
+- declare a function and give it a number as parameter 
+- use the `toString` method to covert the integer into an string
+- use `reverse` method to reverse the string
+- use the `join` method to join the string 
+- use the `parseInt` method to convert the string back to an integer
+- then use the `Math.sign` method to maintain negative numbers
+
+### Code
+```
+function reverseInt(n) {
+  const reverse = n
+    .toString()
+    .split('')
+    .reverse()
+    .join('')
+return parseInt(reverse) * Math.sign(n)
+}
+```
+
+### Alternative 
+```
+function reverseInt(n) {
+  const reverse = n
+  .toString()
+  .split('')
+  .reverse()
+  .join('')
+  
+  const checkNegativeSign = n < 0 ? parseInt(reverse) * -1 : parseInt(reverse)  // use ternary operator to check if number is negative
+  return checkNegativeSign
+  }
 ```
 
 
