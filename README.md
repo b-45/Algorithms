@@ -116,10 +116,46 @@ function reverseInt(n) {
   .reverse()
   .join('')
   
-// use ternary operator to check if number is negative
+// use the ternary operator to check if the integer is negative
   const checkNegativeSign = n < 0 ? parseInt(reverse) * -1 : parseInt(reverse)  
   return checkNegativeSign
   }
+```
+
+### 5. Max Char
+***
+
+### Problem Statement
+Given a string, return the most repeated character that occurs in the string. i.e "apple" === 'p'
+
+#### Pseudocode
+- declare a function and give it a string as parameter 
+- using the `for of` loop, generate an object named 'charMap' that maps each character in the string to the object.
+- declare a helper variable named 'max' that stores the maximum **value** of the string most repeated in the object.
+- declare another helper variable named 'maxChar' that stores the most repeated **character**. 
+- iterate through the object using a `for in` loop while incrementing the "max" variable and assigning the "maxChar" variable with the most repeated character.
+- return maxChar
+
+#### Code
+```
+function maxChar(str) {
+  const charMap = {}
+  let max = 0
+  let maxChar = ''
+
+  for (let char of str) {
+    charMap[char] ? charMap[char]++ : charMap[char] = 1
+  }
+
+  for (let char in charMap) {
+    if (charMap[char] > max) {
+      max = charMap[char]
+      maxChar = char
+    }
+  }
+  return maxChar
+}
+
 ```
 
 
@@ -127,7 +163,10 @@ function reverseInt(n) {
 
 
 
+Resources:
 
 
-Resource - [
-The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/)
+[The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/)
+
+
+[MDN Javascript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
