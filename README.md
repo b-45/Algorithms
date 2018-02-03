@@ -122,7 +122,7 @@ function reverseInt(n) {
   }
 ```
 
-### 5. Max Char
+### 5. Max Character
 ***
 
 ### Problem Statement
@@ -155,6 +155,37 @@ function maxChar(str) {
   }
   return maxChar
 }
+
+```
+
+### 6. Array Chunking
+***
+
+### Problem Statement
+Given an array and chunk size, divide the array into many subarrays where each subarray is of length size. i.e [1, 2, 3, 4] --> [[1,2], [3, 4]]
+
+#### Pseudocode
+- declare a function and give it an `array` and `size` as parameter 
+- create a helper variable named `chunked` that stores chunks of subarrays where each array is of length size.
+- create another helper variable named `index` starting from 0
+- in a `while` loop, iterate from `index` up to length of `array` 
+- using the slice method, push slices of subarrays that equals of length `size` into `chunked`
+- increment `index` with 'size' to kill the  loop
+- return `chunked`
+
+
+#### Code
+```
+function chunk(array, size) {
+  const chunked = []
+  let index = 0
+
+  while (index < array.length) {
+  chunked.push(array.slice(index, index + size))
+  index += size
+  }
+  return chunked
+}  
 
 ```
 
