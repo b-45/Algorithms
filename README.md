@@ -213,6 +213,35 @@ function cleanString(str) {
 ```
 
 
+### 8. Sentence Capitalization
+***
+
+#### Problem Statement
+Write a function that capitalizes the first letter of each word. i.e "i love javascript" --> "I Love Javascript"
+
+#### Strategy
+- declare a function `capitalize` and give it a string as parameter.
+- make an empty array named `words` to store transformed words
+- iterate over the array while using `split` to convert each string into an array
+- apply `toUpperCase` to transform the first character in each word then concatenate the remaining characters using the `slice` method
+- push the transformed words into the empty array named `words`.
+- `join` array back into string and return.
+
+
+#### Code
+```
+function capitalize(str) {
+  const words = []
+
+  for (let word of str.split(' ')) {
+    words.push(word[0].toUpperCase() + word.slice(1)) 
+  }
+  return words.join(' ')
+}
+
+```
+
+
 
 
 
