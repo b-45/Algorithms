@@ -11,7 +11,7 @@ Javascript Algorithms
 #### Problem Statement
 Return a new string with the reversed order of characters.
 
-#### Pseudocode
+#### Strategy
 - declare a function and give it a string as parameter 
 - use the `split` method to convert the string into an array
 - use `reverse` method to reverse the items in the array
@@ -34,7 +34,7 @@ function reverse(str) {
 #### Problem Statement
 Palindromes are strings that form the same word when reversed. i.e kayak, civic.  Return true if the string is a palindrome or false if it is not.
 
-#### Pseudocode
+#### Strategy
 - declare a function and give it a string as parameter 
 - use the `split` method to covert the string into an array
 - use `reverse` method to reverse the items in the array
@@ -52,10 +52,10 @@ function palindrome(str) {
 ### 3. Fizzbuzz
 ***
 
-### Problem Statement
+#### Problem Statement
 Write a script that prints the number 1 to n, however for multiples of 3 - print "fizz", for multiples of 5 - print "buzz" and finally for multiples of 3 and 5 - print "fizbuzz".
 
-#### Pseudocode
+#### Strategy
 - declare a function and give it a number as parameter 
 - write a for loop to iterate from 1 to n
 - write multiple `else if` statements
@@ -84,10 +84,10 @@ function fizzBuzz(n) {
 ### 4. Reverse Integer
 ***
 
-### Problem Statement
+#### Problem Statement
 Given an integer, return an integer that is reversed while satisfying the following conditions i.e 15 returns 51, -25 returns -52,  100 returns 1.
 
-### Pseudocode
+#### Strategy
 - declare a function and give it a number as parameter 
 - use the `toString` method to covert the integer into an string
 - use `reverse` method to reverse the string
@@ -95,7 +95,7 @@ Given an integer, return an integer that is reversed while satisfying the follow
 - use the `parseInt` method to convert the string back to an integer
 - then use the `Math.sign` method to maintain negative numbers
 
-### Code
+#### Code
 ```
 function reverseInt(n) {
   const reverse = n
@@ -107,7 +107,7 @@ return parseInt(reverse) * Math.sign(n)
 }
 ```
 
-### Alternative 
+#### Alternative 
 ```
 function reverseInt(n) {
   const reverse = n
@@ -125,10 +125,10 @@ function reverseInt(n) {
 ### 5. Max Character
 ***
 
-### Problem Statement
+#### Problem Statement
 Given a string, return the most repeated character that occurs in the string. i.e "apple" === 'p'
 
-#### Pseudocode
+#### Strategy
 - declare a function and give it a string as parameter 
 - using the `for of` loop, generate an object named 'charMap' that maps each character in the string to the object.
 - declare a helper variable named 'max' that stores the maximum **value** of the string most repeated in the object.
@@ -161,10 +161,10 @@ function maxChar(str) {
 ### 6. Array Chunking
 ***
 
-### Problem Statement
+#### Problem Statement
 Given an array and chunk size, divide the array into many subarrays where each subarray is of length size. i.e [1, 2, 3, 4] --> [[1,2], [3, 4]]
 
-#### Pseudocode
+#### Strategy
 - declare a function and give it an `array` and `size` as parameter 
 - create a helper variable named `chunked` that stores chunks of subarrays where each array is of length size.
 - create another helper variable named `index` starting from 0
@@ -188,6 +188,31 @@ function chunk(array, size) {
 }  
 
 ```
+### 7. Anagrams
+***
+
+#### Problem Statement
+Given two strings, check to see if they anagrams of each other. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.  Capital letter should be lowercase, no spaces or punctuations allowed.  i.e "RAIL SAFETY!", "fairy tales" --> True.
+
+#### Strategy
+- declare a function `anagrams` and give it two strings as parameter.
+- declare another helper function `cleanString`that formats the string by removing undesired characters and transforms letters to lowercase.
+- after formatting the string with `cleanString`, use the function `anagrams` to compare both strings to each other
+- return `anagrams`.
+
+#### Code
+```
+function anagrams(stringA, stringB) {
+  return cleanString(stringA) === cleanString(stringB)
+}
+
+function cleanString(str) {
+  return str.replace(/[^\w]/g, '').split('').sort().join('')
+}
+ 
+```
+
+
 
 
 
