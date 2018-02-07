@@ -21,6 +21,7 @@ Return a new string with the reversed order of characters.
 #### Code
 ```
 function reverse(str) {
+    return str
     .split('')
     .reverse()
     .join('')
@@ -240,6 +241,52 @@ function capitalize(str) {
 }
 
 ```
+
+### 9. Print Steps
+***
+
+#### Problem Statement
+Write a function that takes a positive number and prints a step shape N levels using the "#" character.  i.e
+steps (3) -->
+'#  '
+'## '
+'###'
+
+consider the trailng empty spaces within quotes
+
+#### Strategy
+- declare a function `steps` and give it a positive number as parameter.
+- create a 3 x 3 matrix by iterating from 0 to n for (i) rows and (j)columns 
+- if column is less than or equal to row, increment `stair` with '#'
+- else increment `steps` with ' '
+- console.log(steps)
+
+
+
+#### Code
+```
+function stairSteps(n) {
+  for (row = 0; row < n; row++) {
+    let steps = ''
+
+    for(column = 0; column < n; column++) {
+      if (column <= row) {
+        steps += '#'
+      }
+      else {
+        steps += ' '
+      }
+
+    }
+    console.log(steps);
+  }
+}
+
+```
+
+
+
+
 
 
 
