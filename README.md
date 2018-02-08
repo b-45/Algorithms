@@ -5,6 +5,7 @@ Javascript Algorithms
 
 > Algorithm is a set of rules to accomplish a computational task.
 
+
 ### 1. Reverse string
 ***
 
@@ -29,6 +30,7 @@ function reverse(str) {
 }
 ```
 
+
 ### 2. Palindrome
 ***
 
@@ -49,6 +51,7 @@ function palindrome(str) {
     return reversed === str;
 }
 ```
+
 
 ### 3. Fizzbuzz
 ***
@@ -81,6 +84,7 @@ function fizzBuzz(n) {
   }
 }
 ```
+
 
 ### 4. Reverse Integer
 ***
@@ -123,6 +127,7 @@ function reverseInt(n) {
   }
 ```
 
+
 ### 5. Max Character
 ***
 
@@ -159,6 +164,7 @@ function maxChar(str) {
 
 ```
 
+
 ### 6. Array Chunking
 ***
 
@@ -189,6 +195,8 @@ function chunk(array, size) {
 }  
 
 ```
+
+
 ### 7. Anagrams
 ***
 
@@ -228,7 +236,6 @@ Write a function that capitalizes the first letter of each word. i.e "i love jav
 - push the transformed words into the empty array named `words`.
 - `join` array back into string and return.
 
-
 #### Code
 ```
 function capitalize(str) {
@@ -242,14 +249,19 @@ function capitalize(str) {
 
 ```
 
-### 9. Print Steps
+
+### 9. Stairsteps
 ***
 
 #### Problem Statement
 Write a function that takes a positive number and prints a step shape N levels using the "#" character.  i.e
-steps (3) -->
+stairSteps(3) should return -->
+
+
 '#  '
+
 '## '
+
 '###'
 
 consider the trailng empty spaces within quotes
@@ -260,8 +272,6 @@ consider the trailng empty spaces within quotes
 - if column is less than or equal to row, increment `stair` with '#'
 - else increment `steps` with ' '
 - console.log(steps)
-
-
 
 #### Code
 ```
@@ -284,6 +294,48 @@ function stairSteps(n) {
 
 ```
 
+
+### 10. Pyramid
+***
+
+#### Problem Statement
+Write a function that accepts a positive number N.  The function should output a pyramid shape with N levels using the # character.  Make sure the pyramid has spaces on both the left and right hand sides.
+i.e 
+pyramid(3)
+  '  #  '
+  ' ### '
+  '#####'
+
+#### Strategy
+- declare a function `pyramid` and give it a positive number as parameter.
+- write a `for loop` that iterates through each n rows. 
+- create a variable 'level' that assigns empty space to each row.
+- write another `for loop` that iterates over columns such that when given n, each column computes logic that doubles n and subtracts 1.
+- in order to assign "#" to the matrix created, create a variable `midpoint` that locates index of the row's midpoint.
+- use a if block to assign # when midpoint minus row is less than and equal to column and when midpoint plus row greater than and equal to column else add an empty space
+- return level
+
+#### Code
+```
+function pyramid(n){
+  const midpoint = Math.floor((2 * n - 1)/2)
+
+  for (let row = 0; row < n; row++) {
+    let level = ''
+
+    for (let column = 0; column < 2 * n - 1; column++){
+      if (midpoint - row <= column && midpoint + row >= column){
+        level += '#'
+      } else {
+        level += ' '
+      }
+
+    }
+    console.log(level);
+  }
+}
+
+```
 
 
 
