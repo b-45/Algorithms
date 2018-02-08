@@ -300,10 +300,13 @@ function stairSteps(n) {
 
 #### Problem Statement
 Write a function that accepts a positive number N.  The function should output a pyramid shape with N levels using the # character.  Make sure the pyramid has spaces on both the left and right hand sides.
-i.e 
-pyramid(3)
+i.e  pyramid(3) -->
+ 
+ 
   '  #  '
+ 
   ' ### '
+ 
   '#####'
 
 #### Strategy
@@ -335,6 +338,38 @@ function pyramid(n){
   }
 }
 
+```
+
+
+### 11. Vowels
+***
+
+#### Problem Statement
+Write a function that returns the number of vowels used in a string.  Vowels are the characters 'a', 'e''i', 'o', and 'u'.
+i.e. vowels('Hi There!') --> 3
+
+#### Strategy
+- declare a function `vowels` and give it string as parameter.
+- assign 0 to a variable labeled `counter` to count occurences of a vowel
+- assign characters in vowels to a variable labeled `vowels'
+- iterate through lowercased characters in given string and check if it `includes` any vowels
+- if so, increment counter
+- return counter
+ 
+#### Code
+```
+function vowels (str) {
+  let counter = 0
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      counter++
+    } 
+  }
+  return counter
+}
+ 
 ```
 
 
