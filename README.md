@@ -373,6 +373,34 @@ function vowels (str) {
 ```
 
 
+### 12. Factorialize
+***
+
+#### Problem Statement
+Write a function that returns the factorial of the provided integer
+for example: 
+
+5! = 1 * 2 * 3 * 4 * 5 = 120 
+#### Strategy
+- declare a function named `factorialize` and give it integer as parameter.
+- assign 1 to a variable named `result` 
+- iterate through given integer and multiply each iteration of given argument by `result` 
+- return result
+ 
+ 
+#### Code
+```
+function factorialize(num) {
+  let result = 1
+  for (let i = 1;  i <= num;  i++) {
+    result = result * i
+  }
+  return result
+}
+
+```
+
+
 
 
 
@@ -387,5 +415,7 @@ Resources:
 
 [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/)
 
+
+[Freecodecamp](https://www.freecodecamp.org/)
 
 [MDN Javascript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
